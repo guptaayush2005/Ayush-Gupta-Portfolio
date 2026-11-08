@@ -2,6 +2,8 @@
  * Ayush Gupta - Portfolio 3D Experience, Theme Management & Core Interactions
  */
 
+let update3DTheme = null;
+
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     initThreeBackground();
@@ -52,6 +54,9 @@ function applyTheme(theme) {
                 toggleBtn.setAttribute("title", "Switch to light theme");
             }
         }
+    }
+    if (typeof update3DTheme === "function") {
+        update3DTheme(theme);
     }
 }
 
@@ -156,6 +161,31 @@ function initThreeBackground() {
             const icosahedron = new THREE.Mesh(geomWire, matWire);
             scene.add(icosahedron);
 
+            // Responsive 3D Theme Adapter
+            update3DTheme = function(theme) {
+                const isLight = theme === "light";
+                if (pMaterial) {
+                    pMaterial.blending = isLight ? THREE.NormalBlending : THREE.AdditiveBlending;
+                    pMaterial.color.setHex(isLight ? 0xea580c : 0xf97316);
+                    pMaterial.opacity = isLight ? 0.75 : 0.85;
+                    pMaterial.needsUpdate = true;
+                }
+                if (lineMaterial) {
+                    lineMaterial.blending = isLight ? THREE.NormalBlending : THREE.AdditiveBlending;
+                    lineMaterial.color.setHex(isLight ? 0xea580c : 0xf97316);
+                    lineMaterial.opacity = isLight ? 0.22 : 0.12;
+                    lineMaterial.needsUpdate = true;
+                }
+                if (matWire) {
+                    matWire.color.setHex(isLight ? 0xd97706 : 0xfba858);
+                    matWire.opacity = isLight ? 0.14 : 0.07;
+                    matWire.needsUpdate = true;
+                }
+            };
+
+            const currentActiveTheme = document.documentElement.getAttribute("data-theme") || "dark";
+            update3DTheme(currentActiveTheme);
+
             // Smooth Mouse Movement
             let mouseX = 0;
             let mouseY = 0;
@@ -257,7 +287,8 @@ function runCanvasFallback(canvas) {
 
     function frame() {
         ctx.clearRect(0, 0, w, h);
-        ctx.fillStyle = "#F97316";
+        const isLight = document.documentElement.getAttribute("data-theme") === "light";
+        ctx.fillStyle = isLight ? "#EA580C" : "#F97316";
 
         for (let i = 0; i < dots.length; i++) {
             const d = dots[i];
@@ -274,7 +305,9 @@ function runCanvasFallback(canvas) {
                 const d2 = dots[j];
                 const dist = Math.hypot(d.x - d2.x, d.y - d2.y);
                 if (dist < 95) {
-                    ctx.strokeStyle = `rgba(249, 115, 22, ${0.14 * (1 - dist / 95)})`;
+                    ctx.strokeStyle = isLight
+                        ? `rgba(234, 88, 12, ${0.24 * (1 - dist / 95)})`
+                        : `rgba(249, 115, 22, ${0.14 * (1 - dist / 95)})`;
                     ctx.lineWidth = 1;
                     ctx.beginPath();
                     ctx.moveTo(d.x, d.y);

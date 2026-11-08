@@ -37,37 +37,37 @@
 }
 
 [data-theme="light"] {
-    --bg: #F8FAFC;
-    --bg-gradient: radial-gradient(circle at 50% -20%, rgba(234, 88, 12, 0.08) 0%, rgba(248, 250, 252, 0) 70%);
-    --card: rgba(255, 255, 255, 0.94);
+    --bg: #EEF2F6;
+    --bg-gradient: radial-gradient(circle at 50% -10%, rgba(234, 88, 12, 0.12) 0%, rgba(238, 242, 246, 0) 65%);
+    --card: #FFFFFF;
     --card-hover: #FFFFFF;
-    --card-border: rgba(226, 232, 240, 0.95);
-    --card-hover-border: rgba(234, 88, 12, 0.6);
-    --card-shadow: 0 10px 30px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.03);
-    --card-shadow-hover: 0 20px 45px rgba(15, 23, 42, 0.12), 0 0 25px rgba(234, 88, 12, 0.12);
-    --navbar-bg: rgba(248, 250, 252, 0.92);
-    --navbar-border: rgba(226, 232, 240, 0.9);
+    --card-border: rgba(205, 218, 235, 0.85);
+    --card-hover-border: rgba(234, 88, 12, 0.65);
+    --card-shadow: 10px 14px 30px rgba(160, 175, 200, 0.25), -8px -8px 22px rgba(255, 255, 255, 0.95), inset 0 1px 1.5px rgba(255, 255, 255, 1);
+    --card-shadow-hover: 18px 24px 45px rgba(140, 160, 190, 0.35), -10px -10px 25px rgba(255, 255, 255, 1), 0 0 25px rgba(234, 88, 12, 0.18);
+    --navbar-bg: rgba(238, 242, 246, 0.88);
+    --navbar-border: rgba(205, 218, 235, 0.8);
     --text: #0F172A;
     --text-muted: #475569;
     --text-dim: #64748B;
     --accent: #EA580C;
     --accent-hover: #C2410C;
     --accent-light: #F97316;
-    --accent-glow: rgba(234, 88, 12, 0.2);
+    --accent-glow: rgba(234, 88, 12, 0.28);
     --accent-gradient: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
-    --tag-bg: rgba(234, 88, 12, 0.08);
-    --tag-border: rgba(234, 88, 12, 0.35);
-    --btn-secondary-bg: rgba(15, 23, 42, 0.04);
-    --btn-secondary-border: rgba(15, 23, 42, 0.15);
-    --btn-secondary-hover: rgba(15, 23, 42, 0.08);
+    --tag-bg: #FFFFFF;
+    --tag-border: rgba(205, 218, 235, 0.9);
+    --btn-secondary-bg: #FFFFFF;
+    --btn-secondary-border: rgba(205, 218, 235, 0.9);
+    --btn-secondary-hover: #F8FAFC;
     --input-bg: #FFFFFF;
-    --input-border: rgba(203, 213, 225, 0.85);
-    --footer-bg: #F1F5F9;
-    --badge-bg: rgba(255, 255, 255, 0.95);
-    --badge-border: rgba(234, 88, 12, 0.5);
+    --input-border: rgba(203, 213, 225, 0.9);
+    --footer-bg: #E2E8F0;
+    --badge-bg: rgba(255, 255, 255, 0.96);
+    --badge-border: rgba(234, 88, 12, 0.45);
     --badge-text: #0F172A;
     --logo-text: #0F172A;
-    --particle-opacity: 0.45;
+    --particle-opacity: 0.85;
 }
 
 * {
@@ -524,7 +524,7 @@ body::before {
 .stats {
     padding: 20px 8% 80px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 24px;
     position: relative;
     z-index: 2;
@@ -1019,6 +1019,156 @@ footer p {
     color: var(--text-muted);
     margin-bottom: 6px;
     font-size: 13.5px;
+}
+
+/* ================= LIGHT THEME 3D TACTILE PHYSICS & UI/UX ================= */
+[data-theme="light"] .card,
+[data-theme="light"] .stat-card,
+[data-theme="light"] .project-card,
+[data-theme="light"] .skill-card,
+[data-theme="light"] .timeline-card,
+[data-theme="light"] .contact-card,
+[data-theme="light"] .contact-form,
+[data-theme="light"] .hero-card {
+    background: #FFFFFF;
+    box-shadow: 10px 14px 30px rgba(160, 175, 200, 0.25), 
+                -8px -8px 22px rgba(255, 255, 255, 0.95),
+                inset 0 1px 1.5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(210, 222, 238, 0.85);
+}
+
+[data-theme="light"] .card:hover,
+[data-theme="light"] .stat-card:hover,
+[data-theme="light"] .project-card:hover,
+[data-theme="light"] .skill-card:hover,
+[data-theme="light"] .timeline-card:hover,
+[data-theme="light"] .contact-card:hover,
+[data-theme="light"] .hero-card:hover {
+    box-shadow: 18px 24px 45px rgba(140, 160, 190, 0.35), 
+                -10px -10px 25px rgba(255, 255, 255, 1),
+                0 0 26px rgba(234, 88, 12, 0.16);
+    border-color: rgba(234, 88, 12, 0.6);
+}
+
+/* Light Theme 3D Primary & Submit Buttons */
+[data-theme="light"] .btn.primary,
+[data-theme="light"] .contact-form button,
+[data-theme="light"] .project-buttons a:not(.btn-alt) {
+    background: linear-gradient(135deg, #EA580C 0%, #F97316 100%);
+    box-shadow: 0 8px 18px rgba(234, 88, 12, 0.35), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.45), 
+                inset 0 -2px 0 rgba(160, 50, 0, 0.35);
+    border: 1px solid rgba(234, 88, 12, 0.8);
+    color: #ffffff;
+}
+
+[data-theme="light"] .btn.primary:hover,
+[data-theme="light"] .contact-form button:hover,
+[data-theme="light"] .project-buttons a:not(.btn-alt):hover {
+    box-shadow: 0 12px 26px rgba(234, 88, 12, 0.45), 
+                inset 0 1px 1px rgba(255, 255, 255, 0.55), 
+                inset 0 -2px 0 rgba(160, 50, 0, 0.4);
+    transform: translateY(-3px) scale(1.02);
+}
+
+[data-theme="light"] .btn.primary:active,
+[data-theme="light"] .contact-form button:active,
+[data-theme="light"] .project-buttons a:not(.btn-alt):active {
+    transform: translateY(1px);
+    box-shadow: 0 3px 8px rgba(234, 88, 12, 0.3);
+}
+
+/* Light Theme 3D Secondary, Alt Buttons & Controls */
+[data-theme="light"] .btn.secondary,
+[data-theme="light"] .btn-apx,
+[data-theme="light"] .project-buttons a.btn-alt,
+[data-theme="light"] .socials a,
+[data-theme="light"] .theme-toggle-btn,
+[data-theme="light"] .resume-btn {
+    background: #FFFFFF;
+    box-shadow: 4px 5px 12px rgba(165, 180, 205, 0.22), 
+                -4px -4px 10px rgba(255, 255, 255, 0.95),
+                inset 0 1px 0 rgba(255, 255, 255, 1);
+    border: 1px solid rgba(210, 222, 238, 0.9);
+    color: var(--text);
+}
+
+[data-theme="light"] .resume-btn {
+    color: var(--accent);
+    border-color: rgba(234, 88, 12, 0.6);
+}
+
+[data-theme="light"] .btn-apx {
+    color: var(--accent);
+    border-color: rgba(234, 88, 12, 0.6);
+}
+
+[data-theme="light"] .btn.secondary:hover,
+[data-theme="light"] .project-buttons a.btn-alt:hover,
+[data-theme="light"] .socials a:hover,
+[data-theme="light"] .theme-toggle-btn:hover {
+    box-shadow: 6px 8px 18px rgba(155, 170, 195, 0.3), 
+                -5px -5px 14px rgba(255, 255, 255, 1);
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+[data-theme="light"] .btn-apx:hover,
+[data-theme="light"] .resume-btn:hover {
+    background: var(--accent);
+    color: #ffffff;
+    box-shadow: 0 8px 22px rgba(234, 88, 12, 0.35);
+}
+
+/* Light Theme 3D Floating Badges & Hero Wrapper */
+[data-theme="light"] .floating-badge {
+    background: rgba(255, 255, 255, 0.96);
+    box-shadow: 8px 10px 24px rgba(155, 170, 195, 0.28), 
+                -6px -6px 16px rgba(255, 255, 255, 0.95),
+                inset 0 1px 1.5px rgba(255, 255, 255, 1);
+    border: 1px solid rgba(234, 88, 12, 0.4);
+    color: #0F172A;
+}
+
+/* Light Theme 3D Tech Chips / Spans */
+[data-theme="light"] .project-content span {
+    background: #FFFFFF;
+    box-shadow: 2px 2px 6px rgba(165, 180, 205, 0.2), 
+                -2px -2px 5px rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(215, 225, 238, 0.85);
+    color: #1E293B;
+}
+
+/* Light Theme 3D Progress Bars */
+[data-theme="light"] .bar {
+    background: rgba(205, 218, 235, 0.5);
+    box-shadow: inset 1px 1px 3px rgba(150, 165, 185, 0.35);
+}
+
+/* Light Theme Glare Light */
+[data-theme="light"] .tilt-glare {
+    background: radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), rgba(255, 255, 255, 0.6) 0%, rgba(234, 88, 12, 0.08) 35%, transparent 65%);
+}
+
+/* Highlights & Badges */
+.highlight-card {
+    border-color: rgba(249, 115, 22, 0.5) !important;
+}
+
+.timeline-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+    color: var(--accent);
+    background: var(--tag-bg);
+    border: 1px solid var(--tag-border);
+    padding: 4px 12px;
+    border-radius: 20px;
+    margin-bottom: 12px;
 }
 
 /* ================= ACCESSIBILITY: REDUCED MOTION ================= */
