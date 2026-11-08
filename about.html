@@ -7,30 +7,44 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
+<!-- 3D Interactive Canvas -->
+<canvas id="bg-canvas"></canvas>
+
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="index.html" class="logo">
         <span>AG</span>
         <h2>AYUSH GUPTA</h2>
-    </div>
+    </a>
 
     <ul>
         <li><a href="index.html">HOME</a></li>
-        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="about.html" class="active">ABOUT</a></li>
         <li><a href="projects.html">PROJECTS</a></li>
         <li><a href="skills.html">SKILLS</a></li>
         <li><a href="achievements.html">ACHIEVEMENTS</a></li>
         <li><a href="contact.html">CONTACT</a></li>
     </ul>
 
-    <a href="Resume AYUSH.pdf" class="resume-btn">
-        DOWNLOAD RESUME
-    </a>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <a href="Resume AYUSH.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> RESUME
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
 </nav>
 
@@ -42,14 +56,10 @@
         <h3>Career Objective</h3>
 
         <p>
-            Motivated B.Tech Computer Science & Information Technology
-            student with a strong interest in Web Development,
-            Software Engineering, Cybersecurity and Artificial
-            Intelligence.
-
-            Seeking internship and entry-level opportunities to
-            apply technical skills, contribute to innovative
-            projects and continuously grow as a developer.
+            Motivated B.Tech Computer Science & Information Technology student with a strong interest in Web
+            Development, Software Engineering, and Artificial Intelligence. Seeking internship and entry-level
+            opportunities to apply technical skills, contribute to innovative projects, and gain practical industry
+            experience while continuously learning and growing as a developer.
         </p>
     </div>
 
@@ -57,61 +67,100 @@
         <h3>Education</h3>
 
         <p>
-            🎓 B.Tech Computer Science & Information Technology<br>
-            Dronacharya Group of Institutions, AKTU<br>
-            2024 - 2028
+            <strong>🎓 Dronacharya Group of Institutions, AKTU</strong><br>
+            B.Tech in Computer Science & Information Technology (CS & IT)<br>
+            2024 – 2028
         </p>
 
         <br>
 
         <p>
-            Semester 1 : 6.7 SGPA<br>
-            Semester 2 : 5.5 SGPA<br>
-            Semester 3 : 6.8 SGPA<br>
-            Semester 4 : 5.8 SGPA
+            <strong>Academic Performance:</strong><br>
+            Semester 1 : 6.7 SGPA &nbsp;|&nbsp; Semester 2 : 5.5 SGPA<br>
+            Semester 3 : 6.8 SGPA &nbsp;|&nbsp; Semester 4 : 5.8 SGPA
         </p>
 
         <br>
 
         <p>
-            Class XII : SRVS School, Chandauli<br>
-            Percentage : 76.2%
-        </p>
-
-        <br>
-
-        <p>
-            Class X : MCS School, Mughalsarai<br>
-            Percentage : 72.2%
+            <strong>Class XII (Senior Secondary):</strong> SRVS School, Chandauli — 76.2%<br>
+            <strong>Class X (Secondary):</strong> MCS School, Mughalsarai — 72.2%
         </p>
     </div>
 
     <div class="card">
-    <h3>Experience</h3>
+        <h3>Experience & Leadership</h3>
 
-    <p>🚀 Co-Founder – T.WILL (TECH WILL)</p>
-    <br>
+        <p>
+            <strong>🚀 Founder & Lead Developer — APX DIGITAL</strong> &nbsp;<span style="color:var(--accent);">| Current &bull; <a href="https://apx-digital.vercel.app/" target="_blank" style="color:var(--accent); font-weight:600; text-decoration:underline;">apx-digital.vercel.app <i class="fas fa-external-link-alt" style="font-size:12px;"></i></a></span><br>
+            • Founded and lead APX DIGITAL, an engineering agency providing full-stack web systems, digital transformation, and AI integrations.<br>
+            • Architected enterprise-grade client projects including Ayush Service Center retail digitization with 190+ products, phone OTP authentication, automated WhatsApp invoices, and an 18-module cloud ERP.
+        </p>
 
-    <p>🏆 GeeksforGeeks Campus Mantri</p>
-    <br>
+        <br>
 
-    <p>🎯 Internshala Student Ambassador</p>
-    <br>
+        <p>
+            <strong>🎯 Internshala Student Partner (ISP)</strong> &nbsp;<span style="color:var(--accent);">| Campus Leadership</span><br>
+            • Selected as Internshala Student Partner to spearhead university internship awareness, career workshops, and professional development.<br>
+            • Mentored students on resume enhancement, interview readiness, and discovering industry opportunities.
+        </p>
 
-    <p>🛡️ 3-Month Cybersecurity Internship</p>
-</div>
+        <br>
+
+        <p>
+            <strong>💼 Junior HR</strong> &nbsp;<span style="color:var(--accent);">| Recent</span><br>
+            • Assisted in talent acquisition, resume screening, and coordinating interview schedules for candidate selection.<br>
+            • Supported onboarding processes, employee communication, and maintained HR records and documentation.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>🛡️ Cybersecurity Intern — UptoSkills</strong> &nbsp;<span style="color:var(--accent);">| 3 Months</span><br>
+            • Completed hands-on training in networking, vulnerability assessment, and threat analysis.<br>
+            • Worked on network security concepts, cyber threat analysis, and secure system fundamentals.<br>
+            • Gained practical exposure to risk mitigation techniques and secure design patterns.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>🌐 Web Development Intern — InAmigos Foundation</strong> &nbsp;<span style="color:var(--accent);">| 15 Days</span><br>
+            • Developed responsive websites using HTML5, CSS3, JavaScript, and Bootstrap.<br>
+            • Built and deployed the InAmigos Foundation NGO website with a modern, mobile-friendly UI.<br>
+            • Performed website analysis, UI/UX improvements, and responsive design optimization.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Extra-Curriculars & Languages</h3>
+
+        <p>
+            <strong>🏆 GeeksforGeeks Campus Mantri</strong><br>
+            Served as Campus Ambassador to foster coding culture, organize technical workshops, and promote collaborative coding.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>🌟 National Service Scheme (NSS) Volunteer</strong><br>
+            Actively participated in community welfare drives, social initiatives, and institutional events.
+        </p>
+
+        <br>
+
+        <p>
+            <strong>🗣️ Languages</strong><br>
+            Fluent in English and Hindi.
+        </p>
+    </div>
 
     <div class="card">
         <h3>Certifications</h3>
 
         <p>
-            ✔ Cybersecurity Job Simulation – Forage (2026)
-        </p>
-
-        <br>
-
-        <p>
-            ✔ Software Engineering Job Simulation – Forage (2026)
+            ✔ <strong>Cybersecurity Job Simulation</strong> – Forage (2026)<br>
+            ✔ <strong>Software Engineering Job Simulation</strong> – Forage (2026)
         </p>
     </div>
 

@@ -7,23 +7,29 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Three.js (for 3D Background Experience) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <!-- Icons -->
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
+<!-- 3D Interactive Canvas -->
+<canvas id="bg-canvas"></canvas>
+
 <!-- ================= NAVBAR ================= -->
 
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="index.html" class="logo">
         <span>AG</span>
         <h2>AYUSH GUPTA</h2>
-    </div>
+    </a>
 
     <ul>
-        <li><a href="index.html">HOME</a></li>
+        <li><a href="index.html" class="active">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="projects.html">PROJECTS</a></li>
         <li><a href="skills.html">SKILLS</a></li>
@@ -31,9 +37,17 @@
         <li><a href="contact.html">CONTACT</a></li>
     </ul>
 
-    <a href="Resume AYUSH.pdf" download class="resume-btn">
-        DOWNLOAD RESUME
-    </a>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <a href="Resume AYUSH.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> RESUME
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
 </nav>
 
@@ -46,7 +60,7 @@
     <div class="hero-text">
 
         <div class="tag">
-            🟠 WELCOME TO MY PORTFOLIO
+            <i class="fas fa-rocket"></i> FOUNDER @ APX DIGITAL &bull; AI & WEB
         </div>
 
         <h1>
@@ -55,14 +69,13 @@
         </h1>
 
         <h3>
-            Web Developer |
-            Prompt Engineer |
-            Cybersecurity Enthusiast
+            <span>Founder, APX DIGITAL</span> | Full-Stack & AI Developer
         </h3>
 
         <p>
-            B.Tech CSIT Student passionate about Web Development,
-            Artificial Intelligence and building real-world projects.
+            Founder of APX DIGITAL and B.Tech CS & IT student at Dronacharya Group of Institutions (AKTU).
+            Passionate about Web Development, Artificial Intelligence, and engineering scalable cloud software
+            and digital transformation platforms.
         </p>
 
         <div class="buttons">
@@ -70,45 +83,73 @@
             <a href="Resume AYUSH.pdf"
                download
                class="btn primary">
-                DOWNLOAD RESUME
+                <i class="fas fa-download"></i> DOWNLOAD RESUME
             </a>
 
             <a href="projects.html"
                class="btn secondary">
-                VIEW PROJECTS
+                <i class="fas fa-laptop-code"></i> VIEW PROJECTS
+            </a>
+
+            <a href="https://apx-digital.vercel.app/"
+               target="_blank"
+               class="btn btn-apx">
+                <i class="fas fa-rocket"></i> APX DIGITAL
             </a>
 
         </div>
  <div class="socials">
 
     <a href="https://github.com/guptaayush2005"
-       target="_blank">
+       target="_blank"
+       title="GitHub">
         <i class="fab fa-github"></i>
     </a>
 
     <a href="https://www.linkedin.com/in/ayush-gupta-844516330"
-       target="_blank">
+       target="_blank"
+       title="LinkedIn">
         <i class="fab fa-linkedin"></i>
     </a>
 
-    <a href="https://www.instagram.com/__guptaayush___"
-       target="_blank">
-        <i class="fab fa-instagram"></i>
+    <a href="https://leetcode.com/u/guptaayush200595/"
+       target="_blank"
+       title="LeetCode">
+        <i class="fas fa-code"></i>
     </a>
 
-    <a href="mailto:guptaayush932589@gmail.com">
+    <a href="mailto:guptaayush932589@gmail.com"
+       title="Email">
         <i class="fas fa-envelope"></i>
+    </a>
+
+    <a href="https://www.instagram.com/__guptaayush___"
+       target="_blank"
+       title="Instagram">
+        <i class="fab fa-instagram"></i>
     </a>
 
 </div>
 
     </div>
 
-    <!-- RIGHT -->
+    <!-- RIGHT: 3D HERO CARD WITH FLOATING BADGES -->
 
-    <div class="hero-card">
+    <div class="hero-image-wrapper">
 
-        <img src="images/profile.jpg" alt="Ayush Gupta">
+        <div class="floating-badge badge-top">
+            <i class="fas fa-rocket"></i>
+            <span>Founder @ APX DIGITAL</span>
+        </div>
+
+        <div class="hero-card">
+            <img src="images/profile.jpg" alt="Ayush Gupta">
+        </div>
+
+        <div class="floating-badge badge-bottom">
+            <i class="fas fa-code"></i>
+            <span>Full-Stack & AI Engineer</span>
+        </div>
 
     </div>
 
@@ -119,23 +160,23 @@
 <section class="stats">
 
     <div class="stat-card">
-        <h2>3+</h2>
-        <p>Projects Completed</p>
+        <h2>Founder</h2>
+        <p>APX DIGITAL (Agency)</p>
     </div>
 
     <div class="stat-card">
-        <h2>AI</h2>
-        <p>Passionate Learner</p>
+        <h2>6+</h2>
+        <p>Live Projects & Systems</p>
     </div>
 
     <div class="stat-card">
-        <h2>Cybersecurity</h2>
-        <p>Security Enthusiast</p>
+        <h2>SIH & ISRO</h2>
+        <p>Hackathon Leader & Finalist</p>
     </div>
 
     <div class="stat-card">
-        <h2>∞</h2>
-        <p>Always Building & Learning</p>
+        <h2>IEEE Conf.</h2>
+        <p>Research Presenter (ICNGCET)</p>
     </div>
 
 </section>

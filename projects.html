@@ -7,200 +7,356 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
+<!-- 3D Interactive Canvas -->
+<canvas id="bg-canvas"></canvas>
+
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="index.html" class="logo">
         <span>AG</span>
         <h2>AYUSH GUPTA</h2>
-    </div>
+    </a>
 
     <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>
-        <li><a href="projects.html">PROJECTS</a></li>
+        <li><a href="projects.html" class="active">PROJECTS</a></li>
         <li><a href="skills.html">SKILLS</a></li>
         <li><a href="achievements.html">ACHIEVEMENTS</a></li>
         <li><a href="contact.html">CONTACT</a></li>
     </ul>
 
-    <a href="Resume AYUSH.pdf" class="resume-btn">
-        DOWNLOAD RESUME
-    </a>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <a href="Resume AYUSH.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> RESUME
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
 </nav>
 
 <section class="page">
 
-    <h1 class="page-title">Projects</h1>
+    <h1 class="page-title">Featured Projects</h1>
 
     <div class="project-grid">
 
-        <!-- Project 1 -->
-<div class="project-card">
+        <!-- Project 1: APX DIGITAL Flagship (Replaces old Climate Twin AI entry) -->
+        <div class="project-card featured-card">
 
-    <div class="project-content">
+            <div class="project-content">
 
-        <h2>AI App Compiler</h2>
+                <h2>APX DIGITAL – Flagship Retail Modernization & 18-Module ERP</h2>
 
-        <p>
-            Developed an AI-powered application blueprint generator
-            that converts natural language requirements into structured
-            software plans. Implemented intent extraction, role detection,
-            feature identification, schema generation and validation
-            workflows to improve output consistency and reliability.
-        </p>
+                <p>
+                    Spearheaded complete enterprise digital transformation for Ayush Service Center (a 25+ year-old family retail business in Chandauli, UP).
+                    Engineered a multi-category e-commerce platform with 190+ products, live search & category filtering, passwordless Firebase Phone OTP
+                    authentication, smart vehicle auto-booking with distance and labour fare calculation, automated WhatsApp order notifications,
+                    and an 18-module cloud-based Admin ERP (POS counter billing, low-stock inventory alerts, sales analytics, expense tracking).
+                </p>
 
-        <h4>Tech Stack</h4>
+                <h4>Tech Stack</h4>
 
-        <span>Python</span>
-        <span>FastAPI</span>
-        <span>Streamlit</span>
-        <span>Pydantic</span>
-        <span>Git</span>
-        <span>GitHub</span>
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript (ES6)</span>
+                <span>Firebase Firestore</span>
+                <span>Firebase Auth</span>
+                <span>RBAC</span>
+                <span>Vercel CI/CD</span>
 
-        <div class="project-buttons">
+                <div class="project-buttons">
 
-            <a href="https://github.com/guptaayush2005/ai-app-compiler"
-               target="_blank">
-                GitHub
-            </a>
+                    <a href="https://apx-digital.vercel.app/"
+                       target="_blank">
+                        <i class="fas fa-globe"></i> Agency Site
+                    </a>
 
-            <a href="https://ai-app-compiler-i7cnuryddjp7sqpqvd8t6b.streamlit.app"
-               target="_blank">
-                Live Demo
-            </a>
+                    <a href="https://ayush-hardware-general-store.vercel.app/"
+                       target="_blank">
+                        <i class="fas fa-shopping-cart"></i> Store & ERP
+                    </a>
 
-        </div>
+                    <a href="https://lnkd.in/p/grqVKezn"
+                       target="_blank"
+                       class="btn-alt">
+                        <i class="fab fa-linkedin"></i> Case Study
+                    </a>
 
-    </div>
+                    <a href="https://github.com/guptaayush2005/apx-digital"
+                       target="_blank"
+                       class="btn-alt">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
 
-</div>
-        
+                </div>
 
-        <!-- Project 2 -->
- <div class="project-card">
-
-    <div class="project-content">
-
-        <h2>AI Water Analytics Dashboard</h2>
-
-        <p>
-            Developed an AI-powered water consumption analysis and
-            forecasting dashboard using Python and Streamlit.
-            Implemented interactive visualizations, country-wise
-            water usage analysis and future water consumption
-            prediction models based on historical trends.
-        </p>
-
-        <h4>Tech Stack</h4>
-
-        <span>Python</span>
-        <span>Streamlit</span>
-        <span>Pandas</span>
-        <span>Plotly</span>
-        <span>Machine Learning</span>
-        <span>GitHub</span>
-
-        <div class="project-buttons">
-
-            <a href="https://github.com/guptaayush2005/-water_prediction"
-               target="_blank">
-                GitHub
-            </a>
-
-            <a href="https://fsd492okxe4hzyy8vpx5hq.streamlit.app/"
-               target="_blank">
-                Live Demo
-            </a>
+            </div>
 
         </div>
 
-    </div>
+        <!-- Project 2: ClimateTwin AI (Verified Production Vercel Launch) -->
+        <div class="project-card">
 
-</div>
+            <div class="project-content">
 
-        <!-- Project 3 -->
- <div class="project-card">
+                <h2>ClimateTwin AI – India's Climate Digital Twin (Production)</h2>
 
-    <div class="project-content">
+                <p>
+                    Full-stack national climate intelligence platform and digital twin. Ingests and processes live satellite telemetry (temperature, precipitation, relative humidity, AQI) via the NASA POWER API across all Indian states and UTs.
+                    Features a 7-day predictive ML engine (RandomForest & Regressors), an interactive Multilingual Climate AI Copilot supporting 5 Indian languages (English, हिन्दी, मराठी, বাংলা, தமிழ்), explainable risk diagnosis with NDMA safety advisories, and an interactive "What-If" climate scenario simulator.
+                </p>
 
-        <h2>Ayush Service Centre Website</h2>
+                <h4>Tech Stack</h4>
 
-        <p>
-            Designed, developed and deployed a responsive multi-page
-            business website featuring product showcases, service
-            listings, WhatsApp integration and Google Maps support.
-        </p>
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Scikit-Learn</span>
+                <span>Pandas</span>
+                <span>JavaScript (ES6+)</span>
+                <span>Leaflet.js GIS</span>
+                <span>Chart.js</span>
+                <span>Vercel</span>
 
-        <h4>Tech Stack</h4>
+                <div class="project-buttons">
 
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>Git</span>
-        <span>GitHub</span>
-        <span>Vercel</span>
+                    <a href="https://climate-twin-ai-one.vercel.app/"
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Platform
+                    </a>
 
-        <div class="project-buttons">
+                    <a href="https://github.com/guptaayush2005/ClimateTwin-AI"
+                       target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
 
-            <a href="https://github.com/guptaayush2005/ayush-service-centre"
-               target="_blank">
-                GitHub
-            </a>
+                    <a href="https://lnkd.in/p/gN3qF3DM"
+                       target="_blank"
+                       class="btn-alt">
+                        <i class="fab fa-linkedin"></i> Launch Post
+                    </a>
 
-            <a href="https://ayush-service-centre.vercel.app/"
-               target="_blank">
-                Live Demo
-            </a>
+                </div>
 
-        </div>
-
-    </div>
-
-</div>
-       <div class="project-card">
-
-    <div class="project-content">
-
-        <h2>Ayush Store Management Website</h2>
-
-        <p>
-            Developed and deployed a responsive e-commerce website
-            for a local business with secure Admin Dashboard,
-            Firebase Authentication and Firestore integration.
-        </p>
-
-        <h4>Tech Stack</h4>
-
-        <span>HTML</span>
-        <span>CSS</span>
-        <span>JavaScript</span>
-        <span>Firebase</span>
-        <span>Firestore</span>
-        <span>Firebase Authentication</span>
-
-        <div class="project-buttons">
-
-            <a href="https://github.com/guptaayush2005/ayush-store-management"
-               target="_blank">
-                GitHub
-            </a>
-
-            <a href="https://ayush-service-center.web.app"
-               target="_blank">
-                Live Demo
-            </a>
+            </div>
 
         </div>
 
-    </div>
+        <!-- Project 3: AapdaSetu (Disaster Management & Evacuation Routing) -->
+        <div class="project-card">
 
-</div> 
+            <div class="project-content">
+
+                <h2>AapdaSetu (आपदा सेतु) – AI Multi-Hazard Warning & Evacuation</h2>
+
+                <p>
+                    Next-generation disaster management and flood early warning platform designed for response teams (NDRF/SDRF) and citizens.
+                    Features real-time safe evacuation routing avoiding inundated zones, a 1-Click SOS emergency trigger ("Mai Khatre Me Hu") with live GPS WhatsApp alerts, hyperlocal river and dam telemetry across major Indian basins (Ganga, Yamuna, Brahmaputra), and an AI hazard probability engine with multilingual support.
+                </p>
+
+                <h4>Tech Stack</h4>
+
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>JavaScript</span>
+                <span>Leaflet.js</span>
+                <span>Glassmorphism</span>
+                <span>Vercel</span>
+
+                <div class="project-buttons">
+
+                    <a href="https://aapda-setu-one.vercel.app/"
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Platform
+                    </a>
+
+                    <a href="https://github.com/guptaayush2005/AapdaSetu"
+                       target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Project 4: Ayush Service Centre & Store Management -->
+        <div class="project-card">
+
+            <div class="project-content">
+
+                <h2>Ayush Service Centre & Hardware Store</h2>
+
+                <p>
+                    Refreshed responsive business application featuring service showcases, product listings,
+                    customer inquiries, inventory management, and digital catalog workflows connected to Firebase.
+                </p>
+
+                <h4>Tech Stack</h4>
+
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>Bootstrap</span>
+                <span>JavaScript</span>
+                <span>Firebase Firestore</span>
+                <span>Vercel</span>
+
+                <div class="project-buttons">
+
+                    <a href="https://ayush-service-centre.vercel.app/"
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Service Centre
+                    </a>
+
+                    <a href="https://ayush-hardware-general-store.vercel.app/"
+                       target="_blank"
+                       class="btn-alt">
+                        <i class="fas fa-store"></i> Hardware Store
+                    </a>
+
+                    <a href="https://github.com/guptaayush2005/ayush-service-centre"
+                       target="_blank"
+                       class="btn-alt">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Project 5: AI App Compiler (From Resume) -->
+        <div class="project-card">
+
+            <div class="project-content">
+
+                <h2>AI App Compiler</h2>
+
+                <p>
+                    AI blueprint generator converting natural language requirements into structured software plans.
+                    Implemented intent extraction, role detection, schema generation, and automated validation/repair
+                    workflows to improve blueprint consistency and engineering reliability.
+                </p>
+
+                <h4>Tech Stack</h4>
+
+                <span>Python</span>
+                <span>FastAPI</span>
+                <span>Streamlit</span>
+                <span>Pydantic</span>
+                <span>Git</span>
+                <span>GitHub</span>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/guptaayush2005/ai-app-compiler"
+                       target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+
+                    <a href="https://ai-app-compiler-i7cnuryddjp7sqpqvd8t6b.streamlit.app/"
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Project
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Project 6: InAmigos Foundation NGO Website -->
+        <div class="project-card">
+
+            <div class="project-content">
+
+                <h2>InAmigos Foundation NGO Website</h2>
+
+                <p>
+                    Developed and deployed the official responsive website for InAmigos Foundation NGO during internship.
+                    Delivered a modern, mobile-friendly user interface, performed UI/UX improvements, and optimized page speed.
+                </p>
+
+                <h4>Tech Stack</h4>
+
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Bootstrap</span>
+                <span>Responsive Design</span>
+                <span>Vercel</span>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/guptaayush2005/inamigos-foundation"
+                       target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+
+                    <a href="https://inamigos-foundation-ayush.vercel.app/"
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Project 7: TechFest 3D Website -->
+        <div class="project-card">
+
+            <div class="project-content">
+
+                <h2>TechFest 3D Interactive Website</h2>
+
+                <p>
+                    Created an immersive 3D web experience with real-time camera movements, lighting effects,
+                    and interactive 3D assets to elevate user engagement and showcase advanced frontend visual skills.
+                </p>
+
+                <h4>Tech Stack</h4>
+
+                <span>HTML5</span>
+                <span>CSS3</span>
+                <span>JavaScript</span>
+                <span>Three.js</span>
+                <span>GSAP</span>
+                <span>GitHub Pages</span>
+
+                <div class="project-buttons">
+
+                    <a href="https://github.com/guptaayush2005/techfest-3d-website"
+                       target="_blank">
+                        <i class="fab fa-github"></i> GitHub
+                    </a>
+
+                    <a href="https://guptaayush2005.github.io/techfest-3d-website/"
+                       target="_blank">
+                        <i class="fas fa-external-link-alt"></i> Live Demo
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
 
     </div>
 

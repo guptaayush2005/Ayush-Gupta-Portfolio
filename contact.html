@@ -7,19 +7,25 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <link rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
+<!-- 3D Interactive Canvas -->
+<canvas id="bg-canvas"></canvas>
+
 <!-- Navbar -->
 
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="index.html" class="logo">
         <span>AG</span>
         <h2>AYUSH GUPTA</h2>
-    </div>
+    </a>
 
     <ul>
         <li><a href="index.html">HOME</a></li>
@@ -27,14 +33,22 @@
         <li><a href="projects.html">PROJECTS</a></li>
         <li><a href="skills.html">SKILLS</a></li>
         <li><a href="achievements.html">ACHIEVEMENTS</a></li>
-        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="contact.html" class="active">CONTACT</a></li>
     </ul>
 
-    <a href="Resume AYUSH.pdf"
-       download
-       class="resume-btn">
-        DOWNLOAD RESUME
-    </a>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <a href="Resume AYUSH.pdf"
+           download
+           class="resume-btn">
+            <i class="fas fa-download"></i> RESUME
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
 </nav>
 
@@ -111,15 +125,15 @@
             <div class="contact-card">
 
                 <a href="https://www.linkedin.com/in/ayush-gupta-844516330"
-   target="_blank">
+                   target="_blank">
 
-    <i class="fab fa-linkedin"></i>
+                    <i class="fab fa-linkedin"></i>
 
-    <h3>LinkedIn</h3>
+                    <h3>LinkedIn</h3>
 
-    <p>linkedin.com/in/ayush-gupta-844516330</p>
+                    <p>linkedin.com/in/ayush-gupta-844516330</p>
 
-</a>
+                </a>
 
             </div>
 
@@ -134,13 +148,58 @@
 
                     <h3>GitHub</h3>
 
-                    <p>
-                        github.com/guptaayush2005
-                    </p>
+                    <p>github.com/guptaayush2005</p>
 
                 </a>
 
             </div>
+
+            <!-- LeetCode -->
+
+            <div class="contact-card">
+
+                <a href="https://leetcode.com/u/guptaayush200595/"
+                   target="_blank">
+
+                    <i class="fas fa-code"></i>
+
+                    <h3>LeetCode</h3>
+
+                    <p>leetcode.com/u/guptaayush200595</p>
+
+                </a>
+
+            </div>
+
+            <!-- Location -->
+
+            <div class="contact-card" style="cursor: default;">
+
+                <i class="fas fa-location-dot"></i>
+
+                <h3>Location</h3>
+
+                <p>Greater Noida, Uttar Pradesh, India</p>
+
+            </div>
+
+            <!-- APX DIGITAL -->
+
+            <div class="contact-card">
+
+                <a href="https://apx-digital.vercel.app/"
+                   target="_blank">
+
+                    <i class="fas fa-rocket"></i>
+
+                    <h3>APX DIGITAL</h3>
+
+                    <p>apx-digital.vercel.app</p>
+
+                </a>
+
+            </div>
+
             <!-- Professional Instagram -->
 
 <div class="contact-card">
@@ -150,26 +209,9 @@
 
         <i class="fab fa-instagram"></i>
 
-        <h3>Professional Instagram</h3>
+        <h3>Instagram</h3>
 
         <p>@__guptaayush___</p>
-
-    </a>
-
-</div>
-
-<!-- Content Creator Instagram -->
-
-<div class="contact-card">
-
-    <a href="https://www.instagram.com/ayushascends29"
-       target="_blank">
-
-        <i class="fab fa-instagram"></i>
-
-        <h3>Content Creator Instagram</h3>
-
-        <p>@ayushascends29</p>
 
     </a>
 
@@ -235,9 +277,7 @@ class="contact-form">
     </h3>
 
     <p>
-        Web Developer |
-        Prompt Engineer |
-        Cybersecurity Enthusiast
+        Founder, APX DIGITAL &bull; Full-Stack & AI Developer
     </p>
 
     <p>

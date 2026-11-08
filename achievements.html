@@ -7,87 +7,145 @@
 
     <link rel="stylesheet" href="css/style.css">
 
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 </head>
 <body>
 
+<!-- 3D Interactive Canvas -->
+<canvas id="bg-canvas"></canvas>
+
 <nav class="navbar">
 
-    <div class="logo">
+    <a href="index.html" class="logo">
         <span>AG</span>
         <h2>AYUSH GUPTA</h2>
-    </div>
+    </a>
 
     <ul>
         <li><a href="index.html">HOME</a></li>
         <li><a href="about.html">ABOUT</a></li>
         <li><a href="projects.html">PROJECTS</a></li>
         <li><a href="skills.html">SKILLS</a></li>
-        <li><a href="achievements.html">ACHIEVEMENTS</a></li>
+        <li><a href="achievements.html" class="active">ACHIEVEMENTS</a></li>
         <li><a href="contact.html">CONTACT</a></li>
     </ul>
 
-    <a href="Resume AYUSH.pdf" class="resume-btn">
-        DOWNLOAD RESUME
-    </a>
+    <div class="nav-actions">
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle light/dark theme" title="Toggle theme">
+            <i class="fas fa-sun"></i>
+        </button>
+        <a href="Resume AYUSH.pdf" download class="resume-btn">
+            <i class="fas fa-download"></i> RESUME
+        </a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+            <i class="fas fa-bars"></i>
+        </button>
+    </div>
 
 </nav>
 
 <section class="page">
 
-    <h1 class="page-title">Achievements</h1>
+    <h1 class="page-title">Achievements & Milestones</h1>
 
     <div class="timeline">
 
+        <!-- 1. Founder APX Digital -->
+        <div class="timeline-card">
+            <h3>🚀 Founder — APX DIGITAL</h3>
+            <p>
+                Founded and lead <strong>APX DIGITAL</strong> (<a href="https://apx-digital.vercel.app/" target="_blank" style="color:var(--accent); text-decoration:underline;">apx-digital.vercel.app</a>),
+                spearheading full-stack cloud software architecture, scalable web solutions, and modern enterprise digital transformation platforms.
+            </p>
+        </div>
+
+        <!-- 2. IEEE Conference Paper Presentation -->
+        <div class="timeline-card">
+            <h3>📄 IEEE Conference Paper Presentation (ICNGCET 2026)</h3>
+            <p>
+                Presented research paper titled <strong>"HEALORA: SMART WEB-BASED HEALING AND WELLNESS RETREAT BOOKING APPLICATION SYSTEM"</strong>
+                at the 2nd International Conference on Next-Gen Wireless Communication And Emerging Technologies (ICNGCET 2026, IEEE Conference),
+                hosted at IIMT College of Engineering, Greater Noida.
+            </p>
+        </div>
+
+        <!-- 3. Smart India Hackathon -->
+        <div class="timeline-card">
+            <h3>🇮🇳 Smart India Hackathon (SIH 2026 & SIH 2025)</h3>
+            <p>
+                <strong>Active Participant & Team Leader:</strong> Led cross-functional student engineering teams in
+                end-to-end solution design, distributed system architecture, and working prototype implementation
+                for national challenges.
+            </p>
+        </div>
+
+        <!-- 4. ISRO Hackathon -->
+        <div class="timeline-card">
+            <h3>🚀 ISRO Bharatiya Antariksh Hackathon</h3>
+            <p>
+                Architected and engineered <strong>Climate Twin AI</strong>, integrating real-time NASA POWER meteorological
+                datasets to model climate risk assessment and predictive analytics dashboards.
+            </p>
+        </div>
+
+        <!-- 5. Hack A Geek Runner-Up -->
+        <div class="timeline-card">
+            <h3>🏆 Hack A Geek Hackathon – Runner-Up (2nd Position)</h3>
+            <p>
+                Secured 2nd Position overall as Team Leader, steering product vision, rapid full-stack prototyping,
+                and technical pitching under tight hackathon deadlines.
+            </p>
+        </div>
+
+        <!-- 6. Dron Innovision Hackathon -->
+        <div class="timeline-card">
+            <h3>💡 Dron Innovision Hackathon & Ideathon – Top 20 Finalist</h3>
+            <p>
+                Selected as Top 20 Team Finalist and Round 1 Qualifier serving as Team Leader, demonstrating
+                innovative problem-solving and software architecture.
+            </p>
+        </div>
+
+        <!-- 7. GeeksforGeeks Campus Mantri -->
         <div class="timeline-card">
             <h3>🥇 GeeksforGeeks Campus Mantri</h3>
-            <p>Campus representative promoting coding culture and tech awareness.</p>
-        </div>
-        <div class="timeline-card">
-    <h3>🚀 Co-Founder – T.WILL (TECH WILL)</h3>
-    <p>
-        Co-founded T.WILL, a technology and innovation initiative
-        focused on building impactful projects and community growth.
-    </p>
-</div>
-
-        <div class="timeline-card">
-            <h3>🎯 Internshala Student Ambassador</h3>
-            <p>Represented Internshala and guided students about opportunities.</p>
+            <p>
+                Served as official Campus Ambassador to foster competitive programming, peer code reviews,
+                hackathons, and developer culture across the institution.
+            </p>
         </div>
 
+        <!-- 8. Internshala Student Partner -->
         <div class="timeline-card">
-            <h3>🛡️ 3-Month Cybersecurity Internship</h3>
-            <p>Worked on cybersecurity fundamentals and vulnerability assessment.</p>
+            <h3>🎯 Internshala Student Partner (ISP)</h3>
+            <p>
+                Represented Internshala on campus to promote student career development, professional internship awareness,
+                and guide peers in career preparation.
+            </p>
         </div>
 
+        <!-- 9. NSS Volunteer -->
         <div class="timeline-card">
-            <h3>📄 Published Research Paper</h3>
-            <p>IoT in Airport Systems – Research paper on smart airport security.</p>
+            <h3>🌟 National Service Scheme (NSS) Volunteer</h3>
+            <p>
+                Actively participated as an NSS Volunteer, organizing community welfare drives, technical literacy workshops,
+                and campus leadership activities.
+            </p>
         </div>
 
+        <!-- 10. Forage Certifications -->
         <div class="timeline-card">
-            <h3>🏆 Hack A Geek Runner-Up</h3>
-            <p>Secured 2nd position and led the team successfully.</p>
+            <h3>📜 Industry Job Simulations (Forage, 2026)</h3>
+            <p>
+                Successfully completed the <strong>Cybersecurity Job Simulation (2026)</strong> and
+                <strong>Software Engineering Job Simulation (2026)</strong> via Forage, demonstrating practical
+                skills in secure development and software engineering best practices.
+            </p>
         </div>
-
-        <div class="timeline-card">
-            <h3>🚀 Dron Innovision – Top 20 Team</h3>
-            <p>Selected among the top teams in the hackathon.</p>
-        </div>
-
-        <div class="timeline-card">
-            <h3>🤖 AMD AI Reinforcement Learning Hackathon</h3>
-            <p>Participated in the IIT Delhi AI hackathon.</p>
-        </div>
-
-        <div class="timeline-card">
-            <h3>🌟 NSS Volunteer</h3>
-            <p>Participated in social and technical activities as an NSS volunteer.</p>
-        </div>
-        
-</div>
 
     </div>
 
