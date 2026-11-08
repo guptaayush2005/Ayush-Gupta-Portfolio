@@ -385,6 +385,19 @@ function initNavbar() {
             }
         });
 
+        // Close mobile drawer when any link is clicked
+        navMenu.querySelectorAll("a").forEach((link) => {
+            link.addEventListener("click", () => {
+                navMenu.classList.remove("active");
+                navToggle.setAttribute("aria-expanded", "false");
+                const icon = navToggle.querySelector("i");
+                if (icon) {
+                    icon.classList.add("fa-bars");
+                    icon.classList.remove("fa-xmark");
+                }
+            });
+        });
+
         document.addEventListener("click", (e) => {
             if (!navMenu.contains(e.target) && !navToggle.contains(e.target)) {
                 navMenu.classList.remove("active");
