@@ -84,6 +84,9 @@ body {
     overflow-x: hidden;
     position: relative;
     min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
     transition: background 0.35s ease, color 0.35s ease;
 }
 
@@ -593,6 +596,8 @@ body::before {
     -webkit-backdrop-filter: blur(18px);
     transition: 0.35s ease;
     transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     position: relative;
     overflow: hidden;
     box-shadow: var(--card-shadow);
@@ -642,7 +647,7 @@ body::before {
 /* ================= PROJECTS GRID ================= */
 .project-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr));
     gap: 30px;
 }
 
@@ -782,7 +787,7 @@ body::before {
 
 .skills-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
     gap: 22px;
 }
 
